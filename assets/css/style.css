@@ -79,8 +79,8 @@ a {
 .col{
     margin-left: .5em;
     margin-right: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 .container{
@@ -95,7 +95,6 @@ a {
 }
 
 .profile{
-    margin-top: 0;
     background-color: #ffffff;
     width: 100%;
     box-shadow: 0 0 5px #888888;
@@ -117,6 +116,27 @@ a {
     font-size: 10px;
     color: #7a7a7a;
 }
+
+/* ---- Main Content ---- */
+
+.left-primary-nav{
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #888888;
+}
+
+.right-primary-nav{
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #888888;
+}
+
+.nav-col{
+    float: left;
+    width: 50%;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
 
 /* ---- Input fields ---- */
 
@@ -146,15 +166,34 @@ input[type="search"] {
     .tertiary,
     .secondary {
         display: none;
-        height: auto;
     }
 
     .primary{
         width: 90%;
         margin: 0 auto;
-        height: auto;
     }
 }
+
+@media (max-width: 1099px) {
+
+    /* ---- Layout Containers ---- */
+
+    .secondary {
+        display: none;
+    }
+
+    .primary {
+        width: 75%;
+        height: 100%;
+    }
+
+    .tertiary {
+        width: 25%;
+        height: 100%;
+    }
+}
+
+
 @media (min-width: 769px) {
     /* ---- Navigation ---- */
 
@@ -169,26 +208,19 @@ input[type="search"] {
     }
 
     .main-header,
-    .container {
+    .nav-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
+    .main-content{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .container{
         width: 90%;
-    }
-
-    /* ---- Layout Containers ---- */
-    .primary {
-        width: 60%;
-    }
-
-    .tertiary,
-    .secondary{
-        width: 20%;
-        display: flex;
-        flex-direction: column;
     }
 
     /* ---- Float clearfix ---- */
@@ -202,6 +234,22 @@ input[type="search"] {
 }
 
 @media (min-width: 1100px) {
+
+
+
+    /* ---- Layout Containers ---- */
+
+    .primary {
+        width: 60%;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    .tertiary,
+    .secondary{
+        width: 20%;
+        height: 100%;
+    }
 
     .container{
         width: 80%;
