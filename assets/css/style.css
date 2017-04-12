@@ -1,0 +1,150 @@
+/* =================================
+  General
+==================================== */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #edeff0;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.main-header{
+    background-color: #2c9676;
+    padding: .5em 0;
+    margin-top: 0;
+    align-content: center;
+}
+
+.left-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-nav a {
+    text-align: center;
+    display: block;
+    padding: 0 10px;
+}
+
+.main-nav a {
+    color: #d9dbdc;
+    font-size: .95em;
+    text-transform: capitalize;
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+.logo{
+    color: #ffffff;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.logo img{
+    height: 28px;
+    width: 28px;
+}
+
+.profile{
+    padding-left: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-pic{
+    height: 20px;
+    width: 20px;
+}
+
+/* ---- Layout Containers ---- */
+
+.col{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 30px;
+}
+
+/* ---- Input fields ---- */
+
+input[type="search"] {
+    border-radius: 10px;
+    height: 25px;
+    width: 200px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+    /* ---- Navigation ---- */
+
+    .main-header,
+    .main-nav,
+    .container {
+        display: flex;
+    }
+
+    .main-header,
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    /* ---- Float clearfix ---- */
+
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    .container{
+        width: 80%;
+        max-width: 1150px;
+    }
+
+    /* ---- Layout Containers ---- */
+    .primary {
+    }
+
+    .tertiary,
+    .secondary{
+    }
+
+}
