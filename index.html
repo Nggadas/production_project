@@ -5,29 +5,50 @@
     <title>Production Project</title>
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" >
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <header class="main-header">
-            <div class="container">
+            <div class="container nav-container">
                 <div class="left-nav">
                     <span class="logo"><img src="assets/images/placeholder.png"></span>
                     <form>
                         <input type="search" name="search" placeholder="Search.." autocomplete="off">
-                        <button> &#128269; </button>
+                        <input type="button" name="search" value="&#128269;" class="search-button" >
                     </form>
                 </div>
                 <nav class="main-nav">
                     <a href="#">Home</a>
                     <a href="#">Create Activity</a>
-                    <div class="profile">
+                    <div class="account">
                         <img class="nav-pic" src="assets/images/avartar.png">
-                        <a href="#">First name &#9660</a>
+                        <a href="#">First name <span> &#9660 </span></a>
                     </div>
                 </nav>
             </div>
         </header>
+
+        <div class="container clearfix">
+
+            <div class="tertiary col">
+                <div class="profile">
+                    <img src="assets/images/avartar.png">
+                    <h4>Hello, Firstname</h4>
+                    <a href="#">Edit Your Profile</a>
+                </div>
+            </div>
+
+            <div class="primary col">
+                <div>sdfsdf</div>
+                <div>sefsdfsdf</div>
+            </div>
+
+            <div class="secondary col">
+                <div>sdfsdf</div>
+                <div>sefsdfsdf</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

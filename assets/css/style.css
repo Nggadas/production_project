@@ -7,7 +7,7 @@
 
 body{
     background-color: #edeff0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     margin: 0;
 }
 
@@ -25,11 +25,12 @@ a {
     padding: .5em 0;
     margin-top: 0;
     align-content: center;
+    margin-bottom: 50px;
 }
 
 .left-nav{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .main-nav a {
@@ -61,10 +62,11 @@ a {
     width: 28px;
 }
 
-.profile{
+.account{
     padding-left: 1em;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-pic{
@@ -75,6 +77,8 @@ a {
 /* ---- Layout Containers ---- */
 
 .col{
+    margin-left: .5em;
+    margin-right: .5em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -90,20 +94,73 @@ a {
     margin-top: 30px;
 }
 
+.profile{
+    margin-top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0 0 5px #888888;
+    padding: 20px 0;
+}
+
+.profile img{
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+
+.profile h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile a{
+    font-size: 10px;
+    color: #7a7a7a;
+}
+
 /* ---- Input fields ---- */
 
 input[type="search"] {
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     height: 25px;
-    width: 200px;
+    width: 250px;
+    margin-right: 0;
+}
+
+.search-button{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 25px;
+    width: 50px;
+    margin-left: 0;
 }
 
 /* =================================
   Media Queries
 ==================================== */
+@media (max-width: 768px) {
 
+    /* ---- Layout Containers ---- */
+
+    .tertiary,
+    .secondary {
+        display: none;
+        height: auto;
+    }
+
+    .primary{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
 @media (min-width: 769px) {
     /* ---- Navigation ---- */
+
+    .left-nav{
+        flex-direction: row;
+    }
 
     .main-header,
     .main-nav,
@@ -120,6 +177,18 @@ input[type="search"] {
 
     .container{
         width: 90%;
+    }
+
+    /* ---- Layout Containers ---- */
+    .primary {
+        width: 60%;
+    }
+
+    .tertiary,
+    .secondary{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
     }
 
     /* ---- Float clearfix ---- */
@@ -139,12 +208,5 @@ input[type="search"] {
         max-width: 1150px;
     }
 
-    /* ---- Layout Containers ---- */
-    .primary {
-    }
-
-    .tertiary,
-    .secondary{
-    }
 
 }
