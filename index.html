@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" >
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css" >
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -37,11 +39,40 @@
                     <h4>Hello, Firstname</h4>
                     <a href="#">Edit Your Profile</a>
                 </div>
+
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.uk%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FLondon"
+                        style="border-width:0; box-shadow: 0 0 5px #888888;" width="100%" height="200" frameborder="0" scrolling="no"></iframe>
             </div>
 
             <div class="primary col">
                 <a href="#" class="left-primary-nav nav-col">Activities near you</a>
                 <a href="#" class="right-primary-nav nav-col">Places to visit</a>
+
+
+
+                <!-- Trigger/Open The Modal -->
+                <button onClick="modal()" id="myBtn" style="margin-bottom: 15px" >Open Modal</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Modal Header</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                        </div>
+                    </div>
+
+                </div>
+
 
                 <!-- Activities near you -->
 
