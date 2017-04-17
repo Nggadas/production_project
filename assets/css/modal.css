@@ -29,7 +29,7 @@
     margin-bottom: 15px;
 }
 
-.join-group-btn{
+.add-btn{
     background-color: #2c9676;
     color: #fff;
     padding: 5px 8px;
@@ -74,6 +74,14 @@
     padding: 2px 16px;
     background-color: #2c9676;
     color: white;
+    margin-bottom: 15px;
+}
+
+.profile-pic{
+    float: left;
+    width: 150px;
+    height: 100%;
+    margin-right: 15px;
 }
 
 .modal-body {padding: 2px 16px;}

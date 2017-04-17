@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/dropdown.css" >
     <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="main-header">
@@ -37,25 +38,25 @@
             <div class="tertiary col">
                 <div class="profile">
                     <img src="assets/images/avartar.png" alt="">
-                    <h4>Hello, Firstname</h4>
+                    <h4>Hello, John</h4>
                     <a href="#">Edit Your Profile</a>
                 </div>
 
                 <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.uk%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FLondon"
-                        style="border-width:0; box-shadow: 0 0 5px #888888;" width="100%" height="200" frameborder="0" scrolling="no"></iframe>
+                        style="border-width:0; box-shadow: 0 0 5px #888888; width: 100%;"  height="200" ></iframe>
             </div>
 
             <div class="primary col">
-                <a href="#" class="left-primary-nav nav-col">Activities near you</a>
-                <a href="#" class="right-primary-nav nav-col">Places to visit</a>
+                <a href="index.html" class="left-primary-nav nav-col">Activities near you</a>
+                <a href="places.html" class="right-primary-nav nav-col">Places to visit</a>
 
                 <!-- Activities modal -->
-                <div id="modalActivity" class="modal">
+                <div id="activityModal" class="modal">
 
                     <!-- Modal content -->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <span class="close">&times;</span>
+                            <span class="close close-activity">&times;</span>
                             <h3>Hiking at golden acre park</h3>
                             <div class="modal-info"><span>Members: </span>12</div>
                             <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
@@ -65,7 +66,7 @@
                         <div class="modal-body">
                             <div class="modal-body-top">
                                 <div class="modal-info"><span>Created by: </span>John Doe</div>
-                                <button class="join-group-btn">Join</button>
+                                <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
                             </div>
 
                             <h4>About:</h4>
@@ -81,11 +82,78 @@
 
                 </div>
 
+                <!-- Groups modal -->
+                <div id="groupModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close close-group">&times;</span>
+                            <h3>Five aside basketball</h3>
+                            <div class="modal-info"><span>Members: </span>152</div>
+                            <div class="modal-info"><span>Previous activities: </span>17 </div>
+                            <div class="modal-info"><span>Upcoming activities: </span>5</div>
+                            <div class="modal-info"><span>Tags: </span>Basketball, Football, Volleyball</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-top">
+                                <div class="modal-info"><span>Group admin: </span>John Doe</div>
+                                <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
+                            </div>
+
+                            <h4>About:</h4>
+                            <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- People modal -->
+                <div id="peopleModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close close-people">&times;</span>
+                            
+                            <img src="assets/images/avartar.png" class="profile-pic" alt="">
+                            <h3>John Doe</h3>
+                            <div class="modal-info"><span>Groups: </span>3</div>
+                            <div class="modal-info"><span>Previous activities: </span>8</div>
+                            <div class="modal-info"><span>Upcoming activities: </span>5</div>
+                            <div class="modal-info"><span>Distance: </span>within 1.5miles</div>
+                            <div class="modal-info"><span>Tags: </span>Hiking, Ice skating, Travelling</div>
+
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-top">
+                                <div class="modal-info"><span>Introduction: </span></div>
+                                <button class="add-btn" onclick="feedbackAlert(); checkMark()">Send Request</button>
+                            </div>
+
+                            <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
 
                 <!-- Activities near you -->
 
-                <div class="activities ">
-                    <div class="content-img"><img src="assets/images/hiking.jpg"></div>
+                <div class="content-div ">
+                    <div class="content-img"><img src="assets/images/hiking.jpg" alt=""></div>
 
                     <div class="content-details">
                         <h4>Hiking at golden acre park</h4>
@@ -93,14 +161,14 @@
                             nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
                             tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                         </p>
-                        <div class="members_num"><span>Members: </span>12</div>
+                        <div class="quick-info"><span>Members: </span>12</div>
                     </div>
 
                     <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
-                <div class="activities ">
-                    <div class="content-img"><img src="assets/images/hiking.jpg"></div>
+                <div class="content-div ">
+                    <div class="content-img"><img src="assets/images/hiking.jpg" alt=""></div>
 
                     <div class="content-details">
                         <h4>Hiking at golden acre park</h4>
@@ -108,14 +176,14 @@
                             nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
                             tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                         </p>
-                        <div class="members_num"><span>Members: </span>12</div>
+                        <div class="quick-info"><span>Members: </span>12</div>
                     </div>
 
                     <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
-                <div class="activities ">
-                    <div class="content-img"><img src="assets/images/hiking.jpg"></div>
+                <div class="content-div ">
+                    <div class="content-img"><img src="assets/images/hiking.jpg" alt=""></div>
 
                     <div class="content-details">
                         <h4>Hiking at golden acre park</h4>
@@ -123,14 +191,14 @@
                             nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
                             tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                         </p>
-                        <div class="members_num"><span>Members: </span>12</div>
+                        <div class="quick-info"><span>Members: </span>12</div>
                     </div>
 
                     <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
-                <div class="activities ">
-                    <div class="content-img"><img src="assets/images/hiking.jpg"></div>
+                <div class="content-div ">
+                    <div class="content-img"><img src="assets/images/hiking.jpg" alt=""></div>
 
                     <div class="content-details">
                         <h4>Hiking at golden acre park</h4>
@@ -138,14 +206,14 @@
                             nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
                             tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                         </p>
-                        <div class="members_num"><span>Members: </span>12</div>
+                        <div class="quick-info"><span>Members: </span>12</div>
                     </div>
 
                     <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
-                <div class="activities ">
-                    <div class="content-img"><img src="assets/images/hiking.jpg"></div>
+                <div class="content-div ">
+                    <div class="content-img"><img src="assets/images/hiking.jpg" alt=""></div>
 
                     <div class="content-details">
                         <h4>Hiking at golden acre park</h4>
@@ -153,7 +221,7 @@
                             nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
                             tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                         </p>
-                        <div class="members_num"><span>Members: </span>12</div>
+                        <div class="quick-info"><span>Members: </span>12</div>
                     </div>
 
                     <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
@@ -198,12 +266,11 @@
                 <div>
                     <div class="group-row">
                         <h4>Groups near you</h4>
-                        <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="">Group name</a>
-                        <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="">Group name</a>
-                        <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="">Group name</a>
-                        <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="">Group name</a>
-                        <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="">Group name</a>
-                    </div>
+                        <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                        <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                        <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                        <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                        <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
 
@@ -211,11 +278,11 @@
                 <div>
                     <div class="people-row">
                         <h4>People near you</h4>
-                        <a href="#" target="_blank"><img src="assets/images/avartar.png" alt="">John doe</a>
-                        <a href="#" target="_blank"><img src="assets/images/avartar.png" alt="">John doe</a>
-                        <a href="#" target="_blank"><img src="assets/images/avartar.png" alt="">John doe</a>
-                        <a href="#" target="_blank"><img src="assets/images/avartar.png" alt="">John doe</a>
-                        <a href="#" target="_blank"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
                     </div>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
@@ -223,6 +290,7 @@
             </div>
 
         </div>
+    </div>
     </div>
 </body>
 </html>

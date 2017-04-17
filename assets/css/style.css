@@ -154,9 +154,14 @@ a {
 }
 
 
+/* ---- Places near you ---- */
+.places .quick-info{
+    margin: 10px 0;
+}
+
 /* ---- Activities near you ---- */
 
-.activities{
+.content-div{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -190,11 +195,11 @@ a {
     font-size: 12px;
 }
 
-.members_num{
+.quick-info{
     font-size: 12px;
 }
 
-.members_num span{
+.quick-info span{
     font-weight: 900;
 }
 
@@ -214,6 +219,7 @@ a {
     background-color: #ffffff;
     box-shadow: 0 0 5px #888888;
     padding: 5px 0 0 0;
+    margin-bottom: 50px;
 }
 
 .group-row h4{
@@ -221,7 +227,7 @@ a {
     font-weight: 500;
 }
 
-.group-row a{
+.group-div{
     display: flex;
     align-items: center;
     padding: 10px 2px;
@@ -230,7 +236,7 @@ a {
     font-size: 13px;
 }
 
-.group-row a:hover{
+.group-div:hover{
     background-color: #edeff0;
 }
 
@@ -266,7 +272,7 @@ a {
     font-weight: 500;
 }
 
-.people-row a{
+.people-div{
     display: flex;
     align-items: center;
     padding: 10px 2px;
@@ -275,7 +281,7 @@ a {
     font-size: 13px;
 }
 
-.people-row a:hover{
+.people-div:hover{
     background-color: #edeff0;
 }
 
