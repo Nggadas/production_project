@@ -2,12 +2,9 @@
  * Created by nggadas on 16/04/17.
  */
 
-function modal() {
+function activitiesModal() {
     // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    var modal = document.getElementById('modalActivity');
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];

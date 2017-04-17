@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/modal.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/dropdown.css" >
     <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
 <body>
@@ -48,26 +49,33 @@
                 <a href="#" class="left-primary-nav nav-col">Activities near you</a>
                 <a href="#" class="right-primary-nav nav-col">Places to visit</a>
 
-
-
-                <!-- Trigger/Open The Modal -->
-                <button onClick="modal()" id="myBtn" style="margin-bottom: 15px" >Open Modal</button>
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
+                <!-- Activities modal -->
+                <div id="modalActivity" class="modal">
 
                     <!-- Modal content -->
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close">&times;</span>
-                            <h2>Modal Header</h2>
+                            <h3>Hiking at golden acre park</h3>
+                            <div class="modal-info"><span>Members: </span>12</div>
+                            <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
+                            <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
+                            <div class="modal-info"><span>Distance: </span>2.5miles </div>
                         </div>
                         <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                        </div>
-                        <div class="modal-footer">
-                            <h3>Modal Footer</h3>
+                            <div class="modal-body-top">
+                                <div class="modal-info"><span>Created by: </span>John Doe</div>
+                                <button class="join-group-btn">Join</button>
+                            </div>
+
+                            <h4>About:</h4>
+                            <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            </p>
                         </div>
                     </div>
 
@@ -88,7 +96,7 @@
                         <div class="members_num"><span>Members: </span>12</div>
                     </div>
 
-                    <div class="modal-menu"> &#8801; </div>
+                    <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
                 <div class="activities ">
@@ -103,7 +111,7 @@
                         <div class="members_num"><span>Members: </span>12</div>
                     </div>
 
-                    <div class="modal-menu"> &#8801; </div>
+                    <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
                 <div class="activities ">
@@ -118,7 +126,7 @@
                         <div class="members_num"><span>Members: </span>12</div>
                     </div>
 
-                    <div class="modal-menu"> &#8801; </div>
+                    <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
                 <div class="activities ">
@@ -133,7 +141,7 @@
                         <div class="members_num"><span>Members: </span>12</div>
                     </div>
 
-                    <div class="modal-menu"> &#8801; </div>
+                    <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
                 <div class="activities ">
@@ -148,12 +156,45 @@
                         <div class="members_num"><span>Members: </span>12</div>
                     </div>
 
-                    <div class="modal-menu"> &#8801; </div>
+                    <div onClick="activitiesModal()" class="modal-menu"> &#8801; </div>
                 </div>
 
             </div>
 
             <div class="secondary col">
+
+                <!-- Activities modal -->
+                <div id="modalGroup" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h3>Hiking at golden acre park</h3>
+                            <div class="modal-info"><span>Members: </span>12</div>
+                            <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
+                            <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
+                            <div class="modal-info"><span>Distance: </span>2.5miles </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-top">
+                                <div class="modal-info"><span>Created by: </span>John Doe</div>
+                                <button class="join-group-btn">Join</button>
+                            </div>
+
+                            <h4>About:</h4>
+                            <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                                nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
+                                tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div>
                     <div class="group-row">
                         <h4>Groups near you</h4>

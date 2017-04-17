@@ -26,7 +26,6 @@ a {
     padding: .5em 0;
     margin-top: 0;
     align-content: center;
-    margin-bottom: 50px;
     min-width: 789px;
 }
 
@@ -96,6 +95,10 @@ a {
 .container{
     margin: 0 auto;
     text-align: center;
+}
+
+.main-content{
+    margin-top: 100px;
 }
 
 .main-footer {
@@ -370,6 +373,13 @@ input[type="search"] {
 
 @media (min-width: 769px) {
     /* ---- Navigation ---- */
+
+    .main-header{
+        z-index: 1000;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
 
     .left-nav{
         flex-direction: row;
