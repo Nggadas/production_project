@@ -19,6 +19,51 @@ a {
   Base Layout Styles
 ==================================== */
 
+
+
+/* ---- Dropdown ---- */
+
+.dropbtn {
+    background-color: #2c9676;
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #288264;
+}
+
 /* ---- Navigation ---- */
 
 .main-header{
@@ -204,11 +249,17 @@ a {
 }
 
 .modal-menu{
+    background-color: #2c9676;
+    color: white;
     width: 8%;
     font-weight: 900;
     font-size: 25px;
     cursor: pointer;
     height: 100%;
+}
+
+.modal-menu:hover{
+    background-color: #288264;
 }
 
 /* ---- Groups near you ---- */
