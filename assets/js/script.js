@@ -114,8 +114,14 @@ function checkMark() {
     document.getElementsByClassName('add-btn').innerHTML = '&#10004;';
 }
 
+function activityCreated() {
+    alert("Activity Created!")
+}
+
+function groupCreated() {
+    alert("Group Created!")
+}
+
 function feedbackAlert() {
-
     alert("Your request has been sent, You will be notified with an update.");
-
 }

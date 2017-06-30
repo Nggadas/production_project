@@ -15,6 +15,87 @@ a {
     text-decoration: none;
 }
 
+form {
+    width: 100%;
+    border-radius: 8px;
+    text-align: left;
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 5px;
+    width: 80%;
+    background-color: #ffffff;
+    color: #21252d;
+    margin-bottom: 30px;
+    box-shadow: 0 0 2px #888888;
+}
+
+::-webkit-input-placeholder{
+    font-size: 12px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+button {
+    padding: 10px;
+    color: #FFF;
+    background-color: #2c9676;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+
 /* =================================
   Base Layout Styles
 ==================================== */
@@ -24,8 +105,6 @@ a {
 /* ---- Dropdown ---- */
 
 .dropbtn {
-    background-color: #2c9676;
-    color: white;
     font-size: 25px;
     border: none;
     cursor: pointer;
@@ -54,14 +133,8 @@ a {
     font-size: 12px;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
-
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #288264;
 }
 
 /* ---- Navigation ---- */
@@ -71,7 +144,7 @@ a {
     padding: .5em 0;
     margin-top: 0;
     align-content: center;
-    min-width: 789px;
+    width: 100%;
 }
 
 .left-nav{
@@ -226,7 +299,7 @@ a {
 
 .content-details{
     height: 100%;
-    width: 50%;
+    width: 58%;
     text-align: left;
 }
 
@@ -248,19 +321,19 @@ a {
     font-weight: 900;
 }
 
-.modal-menu{
-    background-color: #2c9676;
-    color: white;
-    width: 8%;
-    font-weight: 900;
-    font-size: 25px;
-    cursor: pointer;
-    height: 100%;
-}
+/*.modal-menu{*/
+    /*background-color: #2c9676;*/
+    /*color: white;*/
+    /*width: 8%;*/
+    /*font-weight: 900;*/
+    /*font-size: 25px;*/
+    /*cursor: pointer;*/
+    /*height: 100%;*/
+/*}*/
 
-.modal-menu:hover{
-    background-color: #288264;
-}
+/*.modal-menu:hover{*/
+    /*background-color: #288264;*/
+/*}*/
 
 /* ---- Groups near you ---- */
 
@@ -376,6 +449,7 @@ input[type="search"] {
     border: none;
 }
 
+
 /* =================================
   Media Queries
 ==================================== */
@@ -385,7 +459,8 @@ input[type="search"] {
     /* ---- Layout Containers ---- */
 
     .secondary {
-        display: none;
+        width: 25%;
+        height: 100%;
     }
 
     .primary {
@@ -394,8 +469,7 @@ input[type="search"] {
     }
 
     .tertiary {
-        width: 25%;
-        height: 100%;
+        display: none;
     }
 }
 
@@ -403,15 +477,31 @@ input[type="search"] {
 
     /* ---- Layout Containers ---- */
 
-    .main-content{
-        min-width: 670px;
+   .about-content{
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+   }
+
+    .content-div{
+        max-height: 120px;
     }
 
-    .nav-container {
-        min-width: 770px;
+    .content-details p{
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    .container{
+    .places{
+        max-height: 110px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .container,
+    .nav-container{
         width: 100%;
     }
 
@@ -425,16 +515,34 @@ input[type="search"] {
         height: 100%;
         margin: 0 auto;
     }
+    /* ---- Responsive divs ---- */
+    .side-nav{
+        display: block;
+    }
+
+    .display-none{
+        display: none;
+    }
+}
+
+@media (max-width: 448px) {
+    .logo{
+        display: none;
+    }
 }
 
 
 @media (min-width: 769px) {
+    /* ---- Responsive divs ---- */
+    .side-nav{
+        display: none;
+    }
+
     /* ---- Navigation ---- */
 
     .main-header{
         z-index: 1000;
         position: fixed;
-        width: 100%;
         top: 0;
     }
 
@@ -459,7 +567,8 @@ input[type="search"] {
         justify-content: space-between;
     }
 
-    .container{
+    .container,
+    .nav-container{
         width: 90%;
     }
 
@@ -470,7 +579,6 @@ input[type="search"] {
         display: table;
         clear: both;
     }
-
 }
 
 @media (min-width: 1100px) {
@@ -491,7 +599,8 @@ input[type="search"] {
         height: 100%;
     }
 
-    .container{
+    .container,
+    .nav-container{
         width: 80%;
         max-width: 1150px;
     }
