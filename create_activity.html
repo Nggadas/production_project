@@ -16,13 +16,15 @@
         <div class="container nav-container">
             <div class="left-nav">
                 <span class="logo"><img src="assets/images/placeholder.png" alt=""></span>
-                <form>
+                <form class="display-none">
                     <input type="search" name="search" placeholder="Search.." autocomplete="off">
                     <input type="button" name="search" value="&#128269;" class="search-button" >
                 </form>
             </div>
+
             <nav class="main-nav">
                 <a href="index.html">Home</a>
+
                 <div class="dropdown">
                     <a href="#" class="dropbtn">Activities</a>
                     <div class="dropdown-content">
@@ -45,7 +47,7 @@
                     <div class="dropdown">
                         <a href="#" class="dropbtn">John Doe<span> &#9660; </span></a>
                         <div class="dropdown-content">
-                            <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Settings</a>
+                            <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Edit Profile</a>
                             <a href="#" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">Sign out</a>
                         </div>
                     </div>
@@ -62,145 +64,135 @@
                 <h4>Hello, John</h4>
                 <a href="#">Edit Your Profile</a>
             </div>
-
-            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.uk%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FLondon"
-                    style="border-width:0; box-shadow: 0 0 5px #888888; width: 100%;"  height="200" ></iframe>
         </div>
 
         <div class="primary col">
             <a href="index.html" class="left-primary-nav nav-col">Activities near you</a>
             <a href="places.html" class="right-primary-nav nav-col">Places to visit</a>
 
-            <!-- Places modal -->
-            <div id="activityModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-activity">&times;</span>
-                        <h3>Hiking at golden acre park</h3>
-                        <div class="modal-info"><span>Members: </span>12</div>
-                        <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
-                        <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
-                        <div class="modal-info"><span>Distance: </span>2.5miles </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Created by: </span>John Doe</div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
-                        </div>
-
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Groups modal -->
-            <div id="groupModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-group">&times;</span>
-                        <h3>Five aside basketball</h3>
-                        <div class="modal-info"><span>Members: </span>152</div>
-                        <div class="modal-info"><span>Previous activities: </span>17 </div>
-                        <div class="modal-info"><span>Upcoming activities: </span>5</div>
-                        <div class="modal-info"><span>Tags: </span>Basketball, Football, Volleyball</div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Group admin: </span>John Doe</div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
-                        </div>
-
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- People modal -->
-            <div id="peopleModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-people">&times;</span>
-
-                        <img src="assets/images/avartar.png" class="profile-pic" alt="">
-                        <h3>John Doe</h3>
-                        <div class="modal-info"><span>Groups: </span>3</div>
-                        <div class="modal-info"><span>Previous activities: </span>8</div>
-                        <div class="modal-info"><span>Upcoming activities: </span>5</div>
-                        <div class="modal-info"><span>Distance: </span>within 1.5miles</div>
-                        <div class="modal-info"><span>Tags: </span>Hiking, Ice skating, Travelling</div>
-
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Introduction: </span></div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Send Request</button>
-                        </div>
-
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
 
             <!-- Create Activity -->
-            <div class="content-div ">
+            <div class="form-div">
                 <form action="index.html" method="post">
 
                     <fieldset>
                         <label for="name">Activity name:</label>
                         <input type="text" id="name" name="user_name" placeholder="activity name..." >
 
-                        <label for="type">Type of activity:</label>
-                        <input type="text" id="type" name="user_name" placeholder="football, hiking, skiing..." >
+                        <label for="venue">Venue/Address:</label>
+                        <input type="text" id="venue" name="venue" placeholder="where is it taking place..." >
 
-                        <label for="start_date">Start date:</label>
-                        <input type="date" id="start_date" name="user_name">
-                        <input type="time" name="user_name">
+                        <label for="date">Start date:</label>
+                        <input type="date" id="date" name="date">
 
-                        <label for="stop_date">Stop date:</label>
-                        <input type="date" id="stop_date" name="user_name">
-                        <input type="time" name="user_name">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time">
 
                         <label for="capacity">Max capacity:</label>
-                        <input type="number" id="capacity" name="user_email" placeholder="max number of attendees..." >
+                        <input type="number" id="capacity" name="user_email" min="0" placeholder="maximum number of attendees..." >
 
-                        <label for="venue">Venue/Address:</label>
-                        <input type="text" id="venue" name="address" placeholder="where is it taking place..." >
+                        <fieldset>
+                            <h4>City:</h4>
+                            <label>
+                                <select name="location">
+                                    <optgroup label="England">
+                                        <option>Select</option>
+                                        <option>Bedfordshire</option>
+                                        <option>Berkshire</option>
+                                        <option>Bristol</option>
+                                        <option>Buckinghamshire</option>
+                                        <option>Cambridgeshire</option>
+                                        <option>Cheshire</option>
+                                        <option>City of London</option>
+                                        <option>Cornwall</option>
+                                        <option>Cumbria</option>
+                                        <option>Derbyshire</option>
+                                        <option>Devon</option>
+                                        <option>Dorset</option>
+                                        <option>Durham</option>
+                                        <option>East Riding of Yorkshire</option>
+                                        <option>East Sussex</option>
+                                        <option>Essex</option>
+                                        <option>Gloucestershire</option>
+                                        <option>Greater London</option>
+                                        <option>Greater Manchester</option>
+                                        <option>Hampshire</option>
+                                        <option>Herefordshire</option>
+                                        <option>Hertfordshire</option>
+                                        <option>Isle of Wight</option>
+                                        <option>Kent</option>
+                                        <option>Lancashire</option>
+                                        <option>Leeds</option>
+                                        <option>Leicestershire</option>
+                                        <option>Lincolnshire</option>
+                                        <option>Merseyside</option>
+                                        <option>Norfolk</option>
+                                        <option>North Yorkshire</option>
+                                        <option>Northamptonshire</option>
+                                        <option>Northumberland</option>
+                                        <option>Nottinghamshire</option>
+                                        <option>Oxfordshire</option>
+                                        <option>Rutland</option>
+                                        <option>Shropshire</option>
+                                        <option>Somerset</option>
+                                        <option>South Yorkshire</option>
+                                        <option>Staffordshire</option>
+                                        <option>Suffolk</option>
+                                        <option>Surrey</option>
+                                        <option>Tyne and Wear</option>
+                                        <option>Warwickshire</option>
+                                        <option>West Midlands</option>
+                                        <option>West Sussex</option>
+                                        <option>West Yorkshire</option>
+                                        <option>Wiltshire</option>
+                                        <option>Worcestershire</option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </fieldset>
 
-                        <label for="postcode">Postcode:</label>
-                        <input type="text" id="postcode" name="postcode">
+                        <fieldset>
+                            <h3>Interests tags:</h3>
+                            <div class="interests">
+                                <div class="interests-row">
+                                    <h4>Indoor activities</h4>
+                                    <input type="checkbox" id="indoor_swimming" value="indoor_swimming" name="user_interest">
+                                    <label for="indoor_swimming" class="light">Indoor swimming</label><br>
 
+                                    <input type="checkbox" id="indoor_football" value="indoor_football" name="user_interest">
+                                    <label for="indoor_football" class="light">Indoor football</label><br>
 
-                        <label for="about">Biography:</label>
+                                    <input type="checkbox" id="cinema" value="cinema" name="user_interest">
+                                    <label for="cinema" class="light">Cinema</label><br>
+
+                                    <input type="checkbox" id="bowling" value="bowling" name="user_interest">
+                                    <label for="bowling" class="light">Bowling</label><br>
+
+                                    <input type="checkbox" id="pool" value="pool" name="user_interest">
+                                    <label for="pool" class="light">Pool (Cue Sports)</label><br>
+                                </div>
+
+                                <div class="interests-row">
+                                    <h4>Outdoor activities</h4>
+                                    <input type="checkbox" id="Scuba diving" value="Scuba diving" name="user_interest">
+                                    <label for="Scuba diving" class="light">Scuba diving</label><br>
+
+                                    <input type="checkbox" id="windsurfing" value="windsurfing" name="user_interest">
+                                    <label for="windsurfing" class="light">Windsurfing</label><br>
+
+                                    <input type="checkbox" id="rock_climbing" value="rock_climbing" name="user_interest">
+                                    <label for="rock_climbing" class="light">Rock climbing</label><br>
+
+                                    <input type="checkbox" id="mountain_biking" value="mountain_biking" name="user_interest">
+                                    <label for="mountain_biking" class="light">Mountain biking</label><br>
+
+                                    <input type="checkbox" id="skiing" value="skiing" name="user_interest">
+                                    <label for="skiing" class="light">Skiing</label><br>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <label for="about">About:</label>
                         <textarea id="about" name="about" rows="8" cols="50"  placeholder="talk about activity..." ></textarea>
                     </fieldset>
 
@@ -213,47 +205,14 @@
         </div>
 
         <div class="secondary col">
-
-            <!-- Activities modal -->
-            <div id="modalGroup" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h3>Hiking at golden acre park</h3>
-                        <div class="modal-info"><span>Members: </span>12</div>
-                        <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
-                        <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
-                        <div class="modal-info"><span>Distance: </span>2.5miles </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Created by: </span>John Doe</div>
-                            <button class="join-group-btn">Join</button>
-                        </div>
-
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
             <div>
                 <div class="group-row">
                     <h4>Groups near you</h4>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
 
@@ -261,17 +220,15 @@
                 <div>
                     <div class="people-row">
                         <h4>People near you</h4>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
                     </div>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

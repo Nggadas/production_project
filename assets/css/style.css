@@ -37,11 +37,10 @@ input[type="time"],
 input[type="url"],
 textarea,
 select {
-    background: rgba(255, 255, 255, 0.1);
+    /*background: rgba(255, 255, 255, 0.1);*/
     border: none;
     font-size: 16px;
     height: auto;
-    margin: 0;
     outline: 0;
     padding: 5px;
     width: 80%;
@@ -184,7 +183,20 @@ label.light {
     font-size: 1.2em;
 }
 
+.login-reg-logo{
+    color: #ffffff;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
 .logo img{
+    height: 28px;
+    width: 28px;
+}
+
+.login-reg-logo img{
     height: 28px;
     width: 28px;
 }
@@ -199,6 +211,47 @@ label.light {
 .nav-pic{
     height: 20px;
     width: 20px;
+}
+
+.logged-out-nav{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ---- login/register pages ---- */
+
+.login-register-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #888888;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.login-register-wrapper{
+    width: 60%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interests{
+    display: flex;
+    justify-content: space-between;
+}
+
+.interests-row{
+    width: 50%;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
 }
 
 /* ---- Layout Containers ---- */
@@ -280,6 +333,15 @@ label.light {
 /* ---- Activities near you ---- */
 
 .content-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #888888;
+    margin-bottom: 15px;
+}
+
+.form-div{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -449,6 +511,15 @@ input[type="search"] {
     border: none;
 }
 
+/* ---- Input fields ---- */
+.content-title{
+    color: #2a6396;
+}
+
+.content-title:hover{
+    text-decoration: underline;
+}
+
 
 /* =================================
   Media Queries
@@ -522,6 +593,12 @@ input[type="search"] {
 
     .display-none{
         display: none;
+    }
+
+    .login-register-wrapper{
+        width: 95%;
+        max-width: 550px;
+        margin-top: 80px;
     }
 }
 
@@ -597,6 +674,12 @@ input[type="search"] {
     .secondary{
         width: 20%;
         height: 100%;
+    }
+
+
+    .login-register-wrapper{
+        max-width: 550px;
+        margin-top: 80px;
     }
 
     .container,

@@ -16,13 +16,15 @@
         <div class="container nav-container">
             <div class="left-nav">
                 <span class="logo"><img src="assets/images/placeholder.png" alt=""></span>
-                <form>
+                <form class="display-none">
                     <input type="search" name="search" placeholder="Search.." autocomplete="off">
                     <input type="button" name="search" value="&#128269;" class="search-button" >
                 </form>
             </div>
+
             <nav class="main-nav">
                 <a href="index.html">Home</a>
+
                 <div class="dropdown">
                     <a href="#" class="dropbtn">Activities</a>
                     <div class="dropdown-content">
@@ -45,7 +47,7 @@
                     <div class="dropdown">
                         <a href="#" class="dropbtn">John Doe<span> &#9660; </span></a>
                         <div class="dropdown-content">
-                            <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Settings</a>
+                            <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Edit Profile</a>
                             <a href="#" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">Sign out</a>
                         </div>
                     </div>
@@ -62,132 +64,33 @@
                 <h4>Hello, John</h4>
                 <a href="#">Edit Your Profile</a>
             </div>
-
-            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.uk%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FLondon"
-                    style="border-width:0; box-shadow: 0 0 5px #888888; width: 100%;"  height="200" ></iframe>
         </div>
 
         <div class="primary col">
             <a href="index.html" class="left-primary-nav nav-col">Activities near you</a>
             <a href="places.html" class="right-primary-nav nav-col">Places to visit</a>
 
-            <!-- Places modal -->
-            <div id="activityModal" class="modal">
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-activity">&times;</span>
-                        <h3>Hiking at golden acre park</h3>
-                        <div class="modal-info"><span>Members: </span>12</div>
-                        <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
-                        <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
-                        <div class="modal-info"><span>Distance: </span>2.5miles </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Created by: </span>John Doe</div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
-                        </div>
+            <!-- Create Group -->
+            <div class="form-div">
+                <!-- Create Activity -->
+                <div class="form-div">
+                    <form action="index.html" method="post">
+                        <fieldset>
+                            <label for="group_name">Group name:</label>
+                            <input type="text" id="group_name" name="group_name" placeholder="group name..." >
 
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
+                            <label for="capacity">Max capacity:</label>
+                            <input type="number" id="capacity" name="capacity" placeholder="max number of members..." >
+
+                            <label for="about">About:</label>
+                            <textarea id="about" name="about" rows="8" cols="50" placeholder="talk about the group..." >
+
+                            </textarea>
+                        </fieldset>
+                        <button onClick="groupCreated()" type="submit">Create Group</button>
+                    </form>
                 </div>
-
-            </div>
-
-            <!-- Groups modal -->
-            <div id="groupModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-group">&times;</span>
-                        <h3>Five aside basketball</h3>
-                        <div class="modal-info"><span>Members: </span>152</div>
-                        <div class="modal-info"><span>Previous activities: </span>17 </div>
-                        <div class="modal-info"><span>Upcoming activities: </span>5</div>
-                        <div class="modal-info"><span>Tags: </span>Basketball, Football, Volleyball</div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Group admin: </span>John Doe</div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Join</button>
-                        </div>
-
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- People modal -->
-            <div id="peopleModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close close-people">&times;</span>
-
-                        <img src="assets/images/avartar.png" class="profile-pic" alt="">
-                        <h3>John Doe</h3>
-                        <div class="modal-info"><span>Groups: </span>3</div>
-                        <div class="modal-info"><span>Previous activities: </span>8</div>
-                        <div class="modal-info"><span>Upcoming activities: </span>5</div>
-                        <div class="modal-info"><span>Distance: </span>within 1.5miles</div>
-                        <div class="modal-info"><span>Tags: </span>Hiking, Ice skating, Travelling</div>
-
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Introduction: </span></div>
-                            <button class="add-btn" onclick="feedbackAlert(); checkMark()">Send Request</button>
-                        </div>
-
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- Create Activity -->
-            <div class="content-div ">
-                <form action="index.html" method="post">
-
-                    <fieldset>
-                        <label for="name">Group name:</label>
-                        <input type="text" id="name" name="user_name" placeholder="activity name..." >
-
-                        <label for="capacity">Max capacity:</label>
-                        <input type="number" id="capacity" name="user_email" placeholder="max number of attendees..." >
-
-                        <label for="about">Biography:</label>
-                        <textarea id="about" name="about" rows="8" cols="50"  placeholder="talk about activity..." ></textarea>
-                    </fieldset>
-
-                    <button onClick="groupCreated()" type="submit">Create Group</button>
-                </form>
             </div>
 
 
@@ -195,47 +98,14 @@
         </div>
 
         <div class="secondary col">
-
-            <!-- Activities modal -->
-            <div id="modalGroup" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h3>Hiking at golden acre park</h3>
-                        <div class="modal-info"><span>Members: </span>12</div>
-                        <div class="modal-info"><span>Venue: </span>Off Arthington Road, Bramhope, Leeds  </div>
-                        <div class="modal-info"><span>Postcode: </span>LS16 8BQ </div>
-                        <div class="modal-info"><span>Distance: </span>2.5miles </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-top">
-                            <div class="modal-info"><span>Created by: </span>John Doe</div>
-                            <button class="join-group-btn">Join</button>
-                        </div>
-
-                        <h4>About:</h4>
-                        <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu phaedra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
-                            nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus,
-                            tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
             <div>
                 <div class="group-row">
                     <h4>Groups near you</h4>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
-                    <div onclick="groupsModal()" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</div>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
+                    <a href="#" class="group-div"><img src="assets/images/placeholder.png" alt="">Group name</a>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
 
@@ -243,17 +113,15 @@
                 <div>
                     <div class="people-row">
                         <h4>People near you</h4>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
-                        <div onclick="peopleModal()" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</div>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
+                        <a href="#" class="people-div"><img src="assets/images/avartar.png" alt="">John doe</a>
                     </div>
                     <button onclick="window.location.href='#'" class="group-btn">View More</button>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

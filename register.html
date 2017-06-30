@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Production Project</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css" >
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+
+<body>
+<header class="main-header">
+    <div class="logged-out-nav container">
+        <span class="login-reg-logo"><img src="assets/images/placeholder.png" alt=""></span>
+    </div>
+</header>
+
+<div class="login-register-wrapper">
+    <div class="login-register-container">
+        <h2>Register</h2>
+        <form action="" method="post">
+            <fieldset>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" placeholder="first name.." >
+
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="last name.." >
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email.." >
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="password..">
+
+                <label for="password_confirmation">Confirm password:</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" placeholder="confirm password..">
+            </fieldset>
+
+            <fieldset>
+                <h3>City:</h3>
+                <label>
+                    <select name="county">
+                        <optgroup label="England">
+                            <option>Select</option>
+                            <option>Bedfordshire</option>
+                            <option>Berkshire</option>
+                            <option>Bristol</option>
+                            <option>Buckinghamshire</option>
+                            <option>Cambridgeshire</option>
+                            <option>Cheshire</option>
+                            <option>City of London</option>
+                            <option>Cornwall</option>
+                            <option>Cumbria</option>
+                            <option>Derbyshire</option>
+                            <option>Devon</option>
+                            <option>Dorset</option>
+                            <option>Durham</option>
+                            <option>East Riding of Yorkshire</option>
+                            <option>East Sussex</option>
+                            <option>Essex</option>
+                            <option>Gloucestershire</option>
+                            <option>Greater London</option>
+                            <option>Greater Manchester</option>
+                            <option>Hampshire</option>
+                            <option>Herefordshire</option>
+                            <option>Hertfordshire</option>
+                            <option>Isle of Wight</option>
+                            <option>Kent</option>
+                            <option>Lancashire</option>
+                            <option>Leeds</option>
+                            <option>Leicestershire</option>
+                            <option>Lincolnshire</option>
+                            <option>Merseyside</option>
+                            <option>Norfolk</option>
+                            <option>North Yorkshire</option>
+                            <option>Northamptonshire</option>
+                            <option>Northumberland</option>
+                            <option>Nottinghamshire</option>
+                            <option>Oxfordshire</option>
+                            <option>Rutland</option>
+                            <option>Shropshire</option>
+                            <option>Somerset</option>
+                            <option>South Yorkshire</option>
+                            <option>Staffordshire</option>
+                            <option>Suffolk</option>
+                            <option>Surrey</option>
+                            <option>Tyne and Wear</option>
+                            <option>Warwickshire</option>
+                            <option>West Midlands</option>
+                            <option>West Sussex</option>
+                            <option>West Yorkshire</option>
+                            <option>Wiltshire</option>
+                            <option>Worcestershire</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <h3>Interests:</h3>
+                <div class="interests">
+                    <div class="interests-row">
+                        <h4>Indoor activities</h4>
+                        <input type="checkbox" id="indoor_swimming" value="indoor_swimming" name="user_interest">
+                        <label for="indoor_swimming" class="light">Indoor swimming</label><br>
+
+                        <input type="checkbox" id="indoor_football" value="indoor_football" name="user_interest">
+                        <label for="indoor_football" class="light">Indoor football</label><br>
+
+                        <input type="checkbox" id="cinema" value="cinema" name="user_interest">
+                        <label for="cinema" class="light">Cinema</label><br>
+
+                        <input type="checkbox" id="bowling" value="bowling" name="user_interest">
+                        <label for="bowling" class="light">Bowling</label><br>
+
+                        <input type="checkbox" id="pool" value="pool" name="user_interest">
+                        <label for="pool" class="light">Pool (Cue Sports)</label><br>
+                    </div>
+
+                    <div class="interests-row">
+                        <h4>Outdoor activities</h4>
+                        <input type="checkbox" id="Scuba diving" value="Scuba diving" name="user_interest">
+                        <label for="Scuba diving" class="light">Scuba diving</label><br>
+
+                        <input type="checkbox" id="windsurfing" value="windsurfing" name="user_interest">
+                        <label for="windsurfing" class="light">Windsurfing</label><br>
+
+                        <input type="checkbox" id="rock_climbing" value="rock_climbing" name="user_interest">
+                        <label for="rock_climbing" class="light">Rock climbing</label><br>
+
+                        <input type="checkbox" id="mountain_biking" value="mountain_biking" name="user_interest">
+                        <label for="mountain_biking" class="light">Mountain biking</label><br>
+
+                        <input type="checkbox" id="skiing" value="skiing" name="user_interest">
+                        <label for="skiing" class="light">Skiing</label><br>
+                    </div>
+                </div>
+            </fieldset>
+            <button onClick="groupCreated()" type="submit">Register</button>
+        </form>
+    </div>
+    <span style="margin-top: 20px">Already a member? <a href="#">Log in</a></span>
+</div>
+</body>
+</html>
